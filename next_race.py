@@ -1,8 +1,8 @@
 import json
 from tqdm import tqdm
 
-import sekitoba_data_manage as dm
-import sekitoba_psql as ps
+import SekitobaDataManage as dm
+import SekitobaPsql as ps
 
 COLUM_NAME = "next_race"
 
@@ -13,6 +13,7 @@ def main():
 
     for race_id in tqdm( next_race_data.keys() ):
         for horce_id in next_race_data[race_id].keys():
+            print( race_id, horce_id, next_race_data[race_id][horce_id] )
             race_horce_data.update_data( COLUM_NAME, json.dumps( next_race_data[race_id][horce_id], ensure_ascii = False ), \
                                         race_id, horce_id, "horce_id" )
 

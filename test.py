@@ -1,5 +1,5 @@
 from tqdm import tqdm
-import sekitoba_psql as ps
+import SekitobaPsql as ps
 
 def main():
     horce_data = ps.HorceData()

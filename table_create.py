@@ -1,6 +1,5 @@
-import sekitoba_data_manage as dm
-import sekitoba_library as lib
-import sekitoba_psql as ps
+import SekitobaDataManage as dm
+import SekitobaPsql as ps
 
 def main():
     race_data = ps.RaceData()
@@ -8,13 +7,15 @@ def main():
     horce_data = ps.HorceData()
     jockey_data = ps.JockeyData()
     trainer_data = ps.TrainerData()
+    prod_data = ps.ProdData()
     
     race_data.create_table()
     race_horce_data.create_table()
     horce_data.create_table()
     jockey_data.create_table()
     trainer_data.create_table()
-
+    prod_data.create_table()
+    
     race_data_data = dm.pickle_load( "race_data.pickle" )
     horce_data_storage = dm.pickle_load( "horce_data_storage.pickle")
     trainer_id_data = dm.pickle_load( "trainer_id_data.pickle" )

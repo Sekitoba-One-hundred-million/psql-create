@@ -1,7 +1,7 @@
 from tqdm import tqdm
 
-import sekitoba_data_manage as dm
-import sekitoba_psql as ps
+import SekitobaDataManage as dm
+import SekitobaPsql as ps
 
 COLUM_NAME = "race_ave_true_skill"
 
